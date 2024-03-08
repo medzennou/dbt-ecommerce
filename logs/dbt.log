@@ -1,0 +1,119 @@
+[0m22:50:05.231453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB55706E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB55706E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB55706F60>]}
+
+
+============================== 22:50:05.244289 | e022c5e6-7708-44a5-b9f8-e97022b2cae7 ==============================
+[0m22:50:05.244289 [info ] [MainThread]: Running with dbt=1.7.5
+[0m22:50:05.246253 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '~/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:50:05.248817 [info ] [MainThread]: Creating dbt configuration folder at ~/.dbt
+[0m22:54:43.692131 [debug] [MainThread]: Starter project path: C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\include\starter_project
+[0m22:54:43.767404 [info ] [MainThread]: 
+Your new dbt project "eco" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:54:43.773753 [info ] [MainThread]: Setting up your profile.
+[0m22:55:22.543692 [error] [MainThread]: Encountered an error:
+[Errno 2] No such file or directory: '~\\.dbt\\profiles.yml'
+[0m22:55:22.614983 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\cli\requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 168, in create_profile_from_profile_template
+    self.write_profile(profile, profile_name)
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 158, in write_profile
+    with open(profiles_filepath, "w") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '~\\.dbt\\profiles.yml'
+
+[0m22:55:22.624871 [debug] [MainThread]: Command `dbt init` failed at 22:55:22.622986 after 317.42 seconds
+[0m22:55:22.625959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB54C331A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB566257C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB56681E20>]}
+[0m22:55:22.627638 [debug] [MainThread]: Flushing usage events
+[0m23:08:12.690178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FA7802C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FA7523320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FA7802E40>]}
+
+
+============================== 23:08:12.700180 | b0c57b20-947d-4c80-b13b-fbd12647dcc5 ==============================
+[0m23:08:12.700180 [info ] [MainThread]: Running with dbt=1.7.5
+[0m23:08:12.702951 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '~/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:49:50.537081 [debug] [MainThread]: Starter project path: C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\include\starter_project
+[0m16:49:50.713976 [info ] [MainThread]: 
+Your new dbt project "ecommerce" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:49:50.726067 [info ] [MainThread]: Setting up your profile.
+[0m14:35:49.704975 [error] [MainThread]: Encountered an error:
+[Errno 2] No such file or directory: '~\\.dbt\\profiles.yml'
+[0m14:35:50.006154 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\cli\requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 168, in create_profile_from_profile_template
+    self.write_profile(profile, profile_name)
+  File "C:\Users\user\Documents\dbt-tutorial-course\.env\Lib\site-packages\dbt\task\init.py", line 158, in write_profile
+    with open(profiles_filepath, "w") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '~\\.dbt\\profiles.yml'
+
+[0m14:35:50.038905 [debug] [MainThread]: Command `dbt init` failed at 14:35:50.037209 after 228473.61 seconds
+[0m14:35:50.055880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FA7523320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FA78F3860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022FA81D72C0>]}
+[0m14:35:50.070167 [debug] [MainThread]: Flushing usage events
+[0m14:37:48.442962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B28C337B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B290606F60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B2906070B0>]}
+
+
+============================== 14:37:48.475409 | 6cb78ad9-0240-4e2e-aab4-aef4e31f5c73 ==============================
+[0m14:37:48.475409 [info ] [MainThread]: Running with dbt=1.7.5
+[0m14:37:48.478023 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '~/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:37:48.478023 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\user\Documents\dbt-ecommerce\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:37:48.485585 [debug] [MainThread]: Command `dbt deps` failed at 14:37:48.485068 after 0.08 seconds
+[0m14:37:48.485585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B2902AC5C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B28A8553A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B29027F2C0>]}
+[0m14:37:48.485585 [debug] [MainThread]: Flushing usage events
