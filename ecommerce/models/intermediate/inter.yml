@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: inter_order_item_product
+    description: ""
+    columns:
+      - name: order_item_id
+        data_type: int64
+        description: ""
+
+      - name: order_id
+        data_type: int64
+        description: ""
+      - &user_id
+        name: user_id
+        data_type: int64
+        description: ""
+        tests:
+        - not_null
+        - unique
+
+      - name: product_id
+        data_type: int64
+        description: ""
+
+      - name: item_sale_price
+        data_type: float64
+        description: ""
+
+      - name: product_departement
+        data_type: string
+        description: ""
+
+      - name: product_cost
+        data_type: float64
+        description: ""
+
+      - name: product_retail_price
+        data_type: float64
+        description: ""
+
+      - name: item_profit
+        data_type: float64
+        description: ""
+
+      - name: item_discount
+        data_type: float64
+        description: ""
+
+
+  - name: inter_first_order_created
+    description: "Epheremal to get the first order created"
+
+    columns:
+     - *user_id
+
+     - name: first_order_created

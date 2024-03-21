@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: ""
+    columns:
+      - name: event_id
+        data_type: int64
+        description: ""
+
+      - name: user_id
+        data_type: int64
+        description: ""
+
+      - name: sequence_number
+        data_type: int64
+        description: ""
+
+      - name: session_id
+        data_type: string
+        description: ""
+
+      - name: created_at
+        data_type: timestamp
+        description: ""
+
+      - name: ip_address
+        data_type: string
+        description: ""
+
+      - name: city
+        data_type: string
+        description: ""
+
+      - name: state
+        data_type: string
+        description: ""
+
+      - name: postal_code
+        data_type: string
+        description: ""
+
+      - name: browser
+        data_type: string
+        description: ""
+
+      - name: traffic_source
+        data_type: string
+        description: ""
+
+      - name: web_link
+        data_type: string
+        description: ""
+
+      - name: event_type
+        data_type: string
+        description: ""

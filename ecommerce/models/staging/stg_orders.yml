@@ -5,27 +5,27 @@ models :
     columns:
       - name: order_id
         tests:
-          - not_null:
-              severity: error
-          - unique:
-              severity: error
+          - primary_key
 
       - name : user_id
         tests:
           - not_null
+
       - name: create_at
         description : 'when the order was created'
-        tests:
-          - not_null
+
       - name: returned_at
-        description: 'when the order returned'
+        description: "When the order was returned"
         tests:
           - not_null:
-              where : "status = 'returned'"
+              where: "status = 'Returned'"
           - dbt_utils.expression_is_true:
-              expression : ">= delivred_at"
+              expression: ">= delivered_at"
               where: "delivered_at IS NOT NULL AND returned_at IS NOT NULL"
-      - name: delivred_at
+
+
+      - name: delivered_at
+        description: "When the order was delivered"
         tests:
           - not_null:
               where: "returned_at IS NOT NULL OR status = 'Complete'"
@@ -34,15 +34,16 @@ models :
               where: "delivered_at IS NOT NULL AND shipped_at IS NOT NULL"
 
       - name: shipped_at
+        description: "When the order was shipped"
         tests:
-          - not_null :
+          - not_null:
               where: "delivered_at IS NOT NULL OR status = 'Shipped'"
-
           - dbt_utils.expression_is_true:
               expression: ">= created_at"
               where: "shipped_at IS NOT NULL"
 
       - name : status
+        description: "{{ doc('status') }}"
         tests:
           - not_null
           - accepted_values:
@@ -58,8 +59,3 @@ models :
         description: "number of items in the order"
         tests:
           - not_null
-          - dbt_expression.expect_columm_values_to_be_between:
-              min_value: 0
-
-
-

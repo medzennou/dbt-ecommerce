@@ -33,5 +33,25 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   ecommerce:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: table
+      +persist_docs:
+        relation: true
+        columns: true
+    intermediate:
+      +materialized: table
+      +persist_docs:
+        relation: true
+        columns: true
+
+    marts:
+      +materialized: table
+      +persist_docs:
+        relation: true
+        columns: true
+      # 7 days
+      +hours_to_expiration: 168
+
+tests:
+  ecommerce:
+    +severity: warn

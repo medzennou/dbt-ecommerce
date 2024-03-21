@@ -1,0 +1,27 @@
+version: 2
+
+seeds:
+  - name: seed_distribution_centre
+    description: "An exmple of seed yml"
+    tests:
+      - dbt_expectations.expect_table_row_count_to_equal:
+          value: 2
+
+    columns:
+      - name: id
+        description: "id of distribution_center"
+        tests:
+          - not_null
+          - unique
+      - name : name
+      - name : latitude
+      - name: longitude
+
+    config :
+      column-types:
+        id : int64
+        name: string
+        latitude: float64
+        longitude: float64
+
+

@@ -8,7 +8,7 @@ ecommerce: # this needs to match the profile: in your dbt_project.yml file
       # To use this, first run (in your terminal): export BIGQUERY_PROJECT="your_project_name"
       # Then dbt will recognise the variable
       database: dbt-ecommerce-416311
-      schema: db-eco # Replace this with dbt_your_name, e.g. dbt_bob
+      schema: dbt_ikhan # Replace this with dbt_your_name, e.g. dbt_bob
       threads: 64 # Max number of concurrent things running at once
       timeout_seconds: 300
       location: US
